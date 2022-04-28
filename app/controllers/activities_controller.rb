@@ -1,13 +1,9 @@
 class ActivitiesController < ApplicationController
-  def quiz
+  def index
 
   end
 
-  def wheel
-
-  end
-
-  def share
+  def show
 
   end
 end
