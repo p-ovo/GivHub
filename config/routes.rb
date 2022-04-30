@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # Pages for searching/filtering activities and for showing one activity
   resources :activities, only: %i[index show]
 
-  # User signup with results attached
+  # User signup with personality attached
   # Check devise docs
 
   # Share your results
