@@ -1,0 +1,74 @@
+
+
+.quiz {
+  background-color: rgb(247, 255, 132);
+  background-size: cover;
+  height: 70vh;
+}
+
+.wheel {
+  background-color: rgb(255, 182, 126);
+  background-size: cover;
+  height: 70vh;
+}
+
+
+.explore {
+  background-color: rgb(143, 248, 255);
+  background-size: cover;
+  height: 100vh;
+}
+
+.button_home {
+  font-size: 16px;
+  font-weight: 900;
+  padding: 14px;
+  background: #ff008c;
+  border-radius: 30px;
+  color: white;
+  width: 120px;
+  text-align: center;
+}
+
+.button_home:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+// .link {
+//   padding: 15px 30px;
+//   margin: 10px;
+//   display: inline-block;
+//   color: #000;
+//   background: #ffce54;
+//   text-decoration: none;
+// }
+
+// .link:hover {
+//   text-decoration: none;
+//   color: #000;
+// }
+
+/*===================*/
+/* BOUNCE OUT
+/*===================*/
+
+.bounce-out-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.bounce-out-on-hover:hover,
+.bounce-out-on-hover:focus,
+.bounce-out-on-hover:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
