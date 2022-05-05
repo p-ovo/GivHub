@@ -10,20 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_28_094821) do
+ActiveRecord::Schema.define(version: 2022_05_05_100941) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "organisation_id", null: false
+    t.bigint "organisation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["organisation_id"], name: "index_activities_on_organisation_id"
   end
 
   create_table "archetypes", force: :cascade do |t|
-    t.integer "personality_id", null: false
-    t.integer "trait_id", null: false
+    t.bigint "personality_id", null: false
+    t.bigint "trait_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["personality_id"], name: "index_archetypes_on_personality_id"
@@ -31,8 +34,8 @@ ActiveRecord::Schema.define(version: 2022_04_28_094821) do
   end
 
   create_table "favourites", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "activity_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_favourites_on_activity_id"
@@ -51,9 +54,18 @@ ActiveRecord::Schema.define(version: 2022_04_28_094821) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable"
+  end
+
   create_table "tags", force: :cascade do |t|
-    t.integer "activity_id", null: false
-    t.integer "trait_id", null: false
+    t.bigint "activity_id", null: false
+    t.bigint "trait_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_tags_on_activity_id"
@@ -74,7 +86,7 @@ ActiveRecord::Schema.define(version: 2022_04_28_094821) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "personality_id", null: false
+    t.bigint "personality_id", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["personality_id"], name: "index_users_on_personality_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
