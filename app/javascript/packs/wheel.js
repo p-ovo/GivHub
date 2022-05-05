@@ -1,12 +1,11 @@
 jQuery(function () {
   // first iteration
-  let position = -13;
+  let position = -20;
   let count = 0;
   let random_seed = 0;
   let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
+  $('#random').prop('disabled', true);
   // Opening animation
-  $("#carousel").css("--position", position);
   let myInterval = setInterval(change_pos, 250);
   function change_pos() {
     position += 1;
@@ -25,6 +24,7 @@ jQuery(function () {
 
     if (position == 15) {
        clearInterval(myInterval);
+        $('#random').prop('disabled', false);
     };
   };
 
@@ -46,31 +46,27 @@ jQuery(function () {
     };
     $("#carousel").css("--position", position);
   });
+
   // Clicking before Action:
   $("#before").on("click", function () {
     position -= 1;
     $("#carousel").css("--position", position)
   });
 
-  // Randomise Action:
-  // $("#random").on("click", function () {
-  //   let x = Math.floor((Math.random() * (50) + 20));
-  //   for (let i=0;i<=x;i++) {
-  //     next();
-  //     console.log("this many times: ", i);
-  //   };
-  // });
 
+  // Random Spin button
   let myInterval2;
   let count2 = 0;
   $("#random").on("click", function () {
     random_seed = Math.floor((Math.random() * (50) + 20));
     console.log(random_seed);
+    $('#random').html("Spinning!")
+    $('#random').prop('disabled', true);
     new_interval();
   });
 
   function new_interval() {
-    myInterval2 = setInterval(randomise, 250);
+    myInterval2 = setInterval(randomise, 150);
   };
   function randomise() {
     count2 += 1;
@@ -78,8 +74,12 @@ jQuery(function () {
     next();
     if (count2 == random_seed) {
       clearInterval(myInterval2);
+      $('#random').prop('disabled', false);
+      $('#random').html("Spin me!")
+      count2 = 0;
     };
   };
+  // End of Random Spin code
 
   function next() {
     position += 1;
