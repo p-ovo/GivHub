@@ -1,8 +1,14 @@
 class ActivitiesController < ApplicationController
   def index
+    # if params[:query].present?
+    #   sql_query = "name LIKE :query OR description LIKE :query"
+    #   @activities = Activity.where(sql_query, query: "%#{params[:query]}%")
+    # else
+    #   @activities = Activity.all
+    # end
+
     if params[:query].present?
-      sql_query = "name LIKE :query OR description LIKE :query"
-      @activities = Activity.where(sql_query, query: "%#{params[:query]}%")
+      @activities = Activity.global_search(params[:query])
     else
       @activities = Activity.all
     end
