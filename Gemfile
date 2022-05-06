@@ -3,21 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.4'
 
-#simple form
-gem 'simple_form'
 #bootstrap
 gem 'bootstrap', '~> 5.1.3'
-
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
 
 # pg search
 gem 'pg_search', '~> 2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.5'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3', '~> 1.4'
-#gem 'pg'
+gem 'sqlite3', '~> 1.4'
+gem 'pg'
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.6.1"
 # Use Puma as the app server
