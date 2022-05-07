@@ -1,38 +1,40 @@
-
-
 .quiz {
-  background-color: rgb(247, 255, 132);
+  padding-top: 10%;
+  background-color: rgb(20, 63, 107);
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
+  color: white;
 }
 
 .wheel {
-  background-color: rgb(255, 182, 126);
+  background-color: rgb(245, 83, 83);
   background-size: cover;
-  height: 70vh;
+  height:60vh;
+  color: black;
 }
 
 
 .explore {
-  background-color: rgb(143, 248, 255);
+  padding-top: 5%;
+  background-color: rgb(254, 177, 57);
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
 }
 
 .button_home {
+  width: fit-content;
   font-size: 16px;
   font-weight: 900;
   padding: 14px;
-  background: #ff008c;
+  background: #F6F54D;
   border-radius: 30px;
-  color: white;
+  color: black;
   width: 120px;
   text-align: center;
 }
 
 .button_home:hover {
   text-decoration: none;
-  color: white;
 }
 
 
