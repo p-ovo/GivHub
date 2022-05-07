@@ -1,3 +1,90 @@
-// Place all the styles related to the activities controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//carousel
+.d-block{
+  height: 500px;
+}
+
+// search bar
+.title{
+  display: flex;
+  justify-content: space-evenly;
+}
+.search-bars{
+  display: flex;
+  justify-content: space-evenly;
+}
+.search-box{
+  width: 400px;
+  display: inline;
+}
+.btn{
+  display: inline;
+}
+
+// card
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
+.card {
+  height: auto;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-around;
+  font-weight: bolder;
+}
+
+.card-link{
+  display: flex;
+  justify-content: space-between;
+}
+
+.far{
+  font-size: 20px;
+  color: pink;
+}
+
+// cards
+.main-container{
+  padding-top: 50px;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
