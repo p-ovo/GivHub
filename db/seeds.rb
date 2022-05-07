@@ -1,4 +1,5 @@
 # seed below is jsut for testing activities_index page purpose
+# change descriptions and picutres later
 organisation1 = Organisation.create(name: "Organisation1")
 activity1 = Activity.create(name: "Pick up Litter", description:"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.", image:"https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg",organisation: organisation1)
 activity2 = Activity.create(name: "Participate in Fundraiser", description:"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.", image:"https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", organisation: organisation1)

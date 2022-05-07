@@ -17,8 +17,8 @@
 @import "/pages/home";
 @import "/config/bootstrap_variables";
 @import "wheel.scss";
-@import "bootstrap";
+//@import "bootstrap";
 @import "activities.scss";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import "bootstrap/scss/bootstrap";
