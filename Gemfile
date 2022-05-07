@@ -6,6 +6,7 @@ ruby '2.7.4'
 #bootstrap
 gem 'bootstrap', '~> 5.1.3'
 
+
 # pg search
 gem 'pg_search', '~> 2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
