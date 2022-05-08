@@ -1,40 +1,70 @@
+h1.title-home {
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  color: black;
+  display: inline-flex;
+  align-items:flex-start;
+  padding-bottom: 20px;
+}
+
+h4.description-home {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
 .quiz {
   padding-top: 10%;
-  background-color: rgb(20, 63, 107);
+  background-color: rgb(255, 225, 98);
   background-size: cover;
   height: 80vh;
   color: white;
 }
 
 .wheel {
-  background-color: rgb(245, 83, 83);
+  background-color: rgb(255, 100, 100);
   background-size: cover;
-  height:60vh;
+  height:40vh;
   color: black;
 }
 
 
 .explore {
-  padding-top: 5%;
-  background-color: rgb(254, 177, 57);
+  margin-top: -30px;
+  background-color: rgb(145, 196, 131);
   background-size: cover;
   height: 80vh;
 }
 
 .button_home {
-  width: fit-content;
+  display: inline-block;
+  width: auto;
   font-size: 16px;
   font-weight: 900;
   padding: 14px;
-  background: #F6F54D;
+  background: none;
   border-radius: 30px;
   color: black;
   width: 120px;
   text-align: center;
+  border: 5px solid #000;
+}
+
+.btn-quiz {
+  background:rgb(255, 238, 0)
+}
+
+.btn-wheel {
+  background:rgb(251, 0, 88);
+}
+
+.btn-explore {
+  background:rgb(0, 255, 110);
 }
 
 .button_home:hover {
   text-decoration: none;
+  color: black;
 }
 
 
