@@ -6,7 +6,7 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <%# Change pictures later%>
+    <%# Change pictures later - use activty images in DB. Randomly show image and title%>
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="https://placeimg.com/1080/500/animals" alt="First slide">
@@ -71,10 +71,10 @@
               <img class="card-img-top" src="<%= activity.image %>" alt="picture">
               <div class="card-body">
               <h3 class="card-title"><%= activity.name %></h3>
-              <p class="card-text"><%= activity.description %></p>
+              <p class="card-text"><%= activity.description.truncate_words(20) %></p>
               <div class="card-link">
                 <i class="far fa-heart"></i>
-                <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                <a href="<%= activity_path(activity) %>" class="btn btn-primary">See more</a>
               </div>
            </div>
           </div>
