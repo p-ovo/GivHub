@@ -1,0 +1,48 @@
+h1 {
+  padding-bottom: 50px;
+}
+
+.user-personality {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.personality-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+}
+
+ul li {
+  display: inline;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.card {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bolder;
+}
+
+.user-favourites {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+/*# sourceMappingURL=users.css.map */

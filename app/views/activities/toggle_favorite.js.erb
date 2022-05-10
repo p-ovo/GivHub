@@ -1,0 +1,7 @@
+<%# need to fix this file %>
+var activityId = '<%= @activity.id%>'
+function toggleLikeButton(activityId, innerHTML) {
+  let likeButton = document.querySelector(`.like-icon[data-id='${activityId}']`)
+  likeButton.classList.toggle('red');
+}
+toggleLikeButton(activityId);

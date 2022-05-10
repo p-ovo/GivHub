@@ -1,4 +1,5 @@
 class Activity < ApplicationRecord
+  acts_as_favoritable
   belongs_to :organisation
   has_many :tags, dependent: :destroy
   validates :name, :description, presence: true

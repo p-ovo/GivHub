@@ -1,12 +1,11 @@
 class ActivitiesController < ApplicationController
-  def index
-    # if params[:query].present?
-    #   sql_query = "name LIKE :query OR description LIKE :query"
-    #   @activities = Activity.where(sql_query, query: "%#{params[:query]}%")
-    # else
-    #   @activities = Activity.all
-    # end
+before_action :authenticate_user!, only: :toggle_favorite
+  def toggle_favorite
+    @activity = Activity.find_by(id: params[:id])
+    current_user.favorited?(@activity)? current_user.unfavorite(@activity) : current_user.favorite(@activity)
+  end
 
+  def index
     if params[:query].present?
       @activities = Activity.global_search(params[:query])
     else
