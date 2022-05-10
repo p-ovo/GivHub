@@ -1,7 +1,8 @@
-h1{
+h1 {
   padding-bottom: 50px;
 }
-.user-personality{
+
+.user-personality {
   padding-top: 50px;
   padding-bottom: 50px;
   border-style: solid;
@@ -10,18 +11,20 @@ h1{
   margin-bottom: 100px;
 }
 
-.personality-img{
+.personality-img {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 10px;
 }
 
 ul li {
-  display:inline;
+  display: inline;
 }
 
-h2{
+h2 {
   padding-bottom: 20px;
 }
+/*# sourceMappingURL=users.css.map */

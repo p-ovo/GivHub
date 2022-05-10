@@ -6,6 +6,9 @@ ruby '2.7.4'
 #bootstrap
 gem 'bootstrap', '~> 5.1.3'
 
+# Favoritor
+gem 'acts_as_favoritor'
+
 
 # pg search
 gem 'pg_search', '~> 2.3.0'

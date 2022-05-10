@@ -2,15 +2,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-10">
-      <h1>Hey, #username</h1>
-      <%# current_user.name %>
+      <h1>Hey, <%= current_user.name %></h1>
       <div class="user-personality">
-        <%# current_user.personality.name %>
-        <h2>You are #personality type</h2>
-        <%# current_user.personality.each do ?%>
+        <h2>You are <%= @personality.name %></h2>
         <img src="https://img.freepik.com/free-vector/young-woman-hug-cuddle-confused-man-show-love-affection-couple-relationship-problems-one-sided-unshared-feeling-husband-think-divorce-breakup-with-wife-flat-vector-illustration_198530-1704.jpg?size=626&ext=jpg&ga=GA1.2.909423103.1651792360" alt="" class="personality-img">
-        <%# current_user.personality.img %>
-        <%# end %>
+        <%# @personality.image%>
         <ul class="trait">
           <h4><li> #trait 1 |</li>
           <li> #trait 2 |</li>
