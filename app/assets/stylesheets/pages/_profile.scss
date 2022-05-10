@@ -25,3 +25,16 @@ ul li {
 h2{
   padding-bottom: 20px;
 }
+
+.card {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bolder;
+}
+
+.user-favourites{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
