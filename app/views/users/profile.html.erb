@@ -1,0 +1,35 @@
+<br><br><br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <h1>Hey, #username</h1>
+      <%# current_user.name %>
+      <div class="user-personality">
+        <%# current_user.personality.name %>
+        <h2>You are #personality type</h2>
+        <%# current_user.personality.each do ?%>
+        <img src="https://img.freepik.com/free-vector/young-woman-hug-cuddle-confused-man-show-love-affection-couple-relationship-problems-one-sided-unshared-feeling-husband-think-divorce-breakup-with-wife-flat-vector-illustration_198530-1704.jpg?size=626&ext=jpg&ga=GA1.2.909423103.1651792360" alt="" class="personality-img">
+        <%# current_user.personality.img %>
+        <%# end %>
+        <ul class="trait">
+          <h4><li> #trait 1 |</li>
+          <li> #trait 2 |</li>
+          <li> #trait 3</li></h4>
+        </ul>
+      </div>
+      <h2>Your Favourite Activities </h2>
+      <div class="user-favourites">
+      <%# loop user's favourite activities %>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
