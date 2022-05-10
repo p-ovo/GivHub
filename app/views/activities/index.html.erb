@@ -6,27 +6,27 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <%# Change pictures later - use activty images in DB. Randomly show image and title%>
+    <%# Change pictures later%>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="https://placeimg.com/1080/500/animals" alt="First slide">
+            <img class="d-block w-100" src="<%= Activity.find(5).image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>My Caption Title (1st Image)</h5>
-                <p>The whole caption will only show up if the screen is at least medium size.</p>
+                <h5><%= Activity.find(5).name %></h5>
+                <p><%= Activity.find(5).description %></p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://placeimg.com/1080/500/arch" alt="Second slide">
+           <img class="d-block w-100" src="<%= Activity.find(10).image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>My Caption Title (1st Image)</h5>
-                <p>The whole caption will only show up if the screen is at least medium size.</p>
+                <h5><%= Activity.find(10).name %></h5>
+                <p><%= Activity.find(10).description %></p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://placeimg.com/1080/500/nature" alt="Third slide">
+            <img class="d-block w-100" src="<%= Activity.find(20).image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>My Caption Title (1st Image)</h5>
-                <p>The whole caption will only show up if the screen is at least medium size.</p>
+                <h5><%= Activity.find(20).name %></h5>
+                <p><%= Activity.find(20).description %></p>
             </div>
         </div>
     </div>
@@ -80,10 +80,10 @@
               <img class="card-img-top" src="<%= activity.image %>" alt="picture">
               <div class="card-body">
               <h3 class="card-title"><%= activity.name %></h3>
-              <p class="card-text"><%= activity.description.truncate_words(20) %></p>
+              <p class="card-text"><%= activity.description %></p>
               <div class="card-link">
                 <i class="far fa-heart"></i>
-                <a href="<%= activity_path(activity) %>" class="btn btn-primary">See more</a>
+                <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
               </div>
            </div>
           </div>
