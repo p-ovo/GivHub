@@ -6,27 +6,30 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <%# Change pictures later%>
+    <% activity1 = Activity.find(rand(1..10)) %>
+    <% activity2 = Activity.find(rand(11..20)) %>
+    <% activity3 = Activity.find(rand(21..30)) %>
+
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="<%= Activity.find(5).image%>" alt="First slide">
+            <img class="d-block w-100" src="<%= activity1.image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5><%= Activity.find(5).name %></h5>
-                <p><%= Activity.find(5).description %></p>
+                <h5><%= activity1.name %></h5>
+                <p><%= activity1.description %></p>
             </div>
         </div>
         <div class="carousel-item">
-           <img class="d-block w-100" src="<%= Activity.find(10).image%>" alt="First slide">
+           <img class="d-block w-100" src="<%= activity2.image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5><%= Activity.find(10).name %></h5>
-                <p><%= Activity.find(10).description %></p>
+                <h5><%= activity2.name %></h5>
+                <p><%= activity2.description %></p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="<%= Activity.find(20).image%>" alt="First slide">
+            <img class="d-block w-100" src="<%= activity3.image%>" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5><%= Activity.find(20).name %></h5>
-                <p><%= Activity.find(20).description %></p>
+                <h5><%= activity3.name %></h5>
+                <p><%= activity3.description %></p>
             </div>
         </div>
     </div>
