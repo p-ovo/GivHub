@@ -1,0 +1,31 @@
+<br><br><br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <h1>Hey, <%= current_user.name %></h1>
+      <div class="user-personality">
+        <h2>You are <%= @personality.name %></h2>
+        <img src="https://img.freepik.com/free-vector/young-woman-hug-cuddle-confused-man-show-love-affection-couple-relationship-problems-one-sided-unshared-feeling-husband-think-divorce-breakup-with-wife-flat-vector-illustration_198530-1704.jpg?size=626&ext=jpg&ga=GA1.2.909423103.1651792360" alt="" class="personality-img">
+        <%# @personality.image%>
+        <ul class="trait">
+          <h4><li> #trait 1 |</li>
+          <li> #trait 2 |</li>
+          <li> #trait 3</li></h4>
+        </ul>
+      </div>
+      <h2>Your Favourite Activities </h2>
+      <div class="user-favourites">
+      <%# loop user's favourite activities %>
+        <% current_user.all_favorited.each do |activity| %>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="<%= activity.image %>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= activity.name %></h5>
+            <p class="card-text"><%= activity.description %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

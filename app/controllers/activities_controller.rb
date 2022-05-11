@@ -1,12 +1,6 @@
 class ActivitiesController < ApplicationController
+before_action :authenticate_user!, only: :toggle_favorite
   def index
-    # if params[:query].present?
-    #   sql_query = "name LIKE :query OR description LIKE :query"
-    #   @activities = Activity.where(sql_query, query: "%#{params[:query]}%")
-    # else
-    #   @activities = Activity.all
-    # end
-
     if params[:query].present?
       @activities = Activity.global_search(params[:query])
     else
@@ -27,6 +21,11 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     # @activity.organisation_id = @organisation.id
     @activity.save
+  end
+
+  def toggle_favorite
+    @activity = Activity.find_by(id: params[:id])
+    current_user.favorited?(@activity) ? current_user.unfavorite(@activity) : current_user.favorite(@activity)
   end
 
   private

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  get 'profile', to: 'users#profile'
   # Front page shows the options
   root to: 'pages#home'
 
@@ -12,7 +12,12 @@ Rails.application.routes.draw do
   get '/wheel', to: 'pages#wheel', as: :wheel
 
   # Pages for searching/filtering activities and for showing one activity
-  resources :activities, only: %i[index show]
+  resources :activities, only: %i[index show] do
+    member do
+      post 'toggle_favorite', to: "activities#toggle_favorite"
+    end
+  end
+
 
   # User signup with personality attached
   # Check devise docs
