@@ -4,6 +4,7 @@ jQuery(function () {
   let count = 0;
   let random_seed = 0;
   let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  // let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
   $('#random').prop('disabled', true);
   // Opening animation
   let myInterval = setInterval(change_pos, 250);
@@ -97,4 +98,7 @@ jQuery(function () {
     $("#carousel").css("--position", position);
   };
 
+  // $(".item").on("click", function () {
+  //   window.location.href = "http://www.google.com";
+  // });
 });

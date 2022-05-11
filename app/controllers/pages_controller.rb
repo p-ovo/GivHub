@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def wheel
-
+    @activities = Activity.all
   end
 
   def share
