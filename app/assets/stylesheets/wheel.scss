@@ -20,10 +20,24 @@ main#carousel {
   --items: 5;
   --middle: 3;
   --position: -20;
-  pointer-events: none;
+  // pointer-events: none;
+}
+
+.wheel-image {
+  display: block;
+  width: 250px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.item h2 {
+  margin-top: 10px;
+  height: 120px;
 }
 
 div.item {
+  text-align: center;
   position: absolute;
   width: 300px;
   height: 400px;
@@ -94,6 +108,95 @@ div.item:nth-of-type(12) {
   --offset: 12;
   background-color: #66FF66;
 }
+
+// div.item:nth-of-type(13) {
+//   --offset: 13;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(14) {
+//   --offset: 14;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(15) {
+//   --offset: 15;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(16) {
+//   --offset: 16;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(17) {
+//   --offset: 17;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(18) {
+//   --offset: 18;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(19) {
+//   --offset: 19;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(20) {
+//   --offset: 20;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(21) {
+//   --offset: 21;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(22) {
+//   --offset: 22;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(23) {
+//   --offset: 23;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(24) {
+//   --offset: 24;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(25) {
+//   --offset: 25;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(26) {
+//   --offset: 26;
+//   background-color: #66FF66;
+// }
+// div.item:nth-of-type(27) {
+//   --offset: 27;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(28) {
+//   --offset: 28;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(29) {
+//   --offset: 29;
+//   background-color: #66FF66;
+// }
+
+// div.item:nth-of-type(30) {
+//   --offset: 30;
+//   background-color: #66FF66;
+// }
 
 .notransition {
   -webkit-transition: none !important;
