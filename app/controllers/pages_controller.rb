@@ -14,4 +14,8 @@ class PagesController < ApplicationController
   def share
 
   end
+
+  def results
+
+  end
 end
