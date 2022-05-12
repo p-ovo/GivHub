@@ -24,7 +24,7 @@
               <p class="card-text"><%= activity.description %></p>
                 <div class="card-link">
                   <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
-                  <%= render 'activities/like_button', activity: activity %>
+                  <%= render 'users/liked_button', activity: activity %>
                   <% end %>
                   <div>
                     <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
