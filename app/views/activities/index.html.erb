@@ -85,9 +85,9 @@
               <h3 class="card-title"><%= activity.name %></h3>
               <p class="card-text"><%= activity.description %></p>
               <div class="card-link">
-              <%# need to figure out how to embet icon in link_to %>
-                <%= link_to "like", toggle_favorite_activity_path(activity), remote: true, method: :post %>
-                <i class="far fa-heart"></i>
+              <%# need to figure out how to embed icon in link_to %>
+                <%# <%= link_to "like", toggle_favorite_activity_path(activity), remote: true, method: :post %>
+                <%# <i class="far fa-heart"></i> %>
                 <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
                 <%= render 'activities/like_button', activity: activity %>
                 <% end %>
