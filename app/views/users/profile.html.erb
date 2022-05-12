@@ -14,26 +14,53 @@
           <li> #trait 3</li></h4>
         </ul>
       </div>
-      <h2>Your Favourite Activities </h2>
-      <div class="user-favourites">
-          <% current_user.all_favorited.each do |activity| %>
-            <div class="card">
-              <img class="card-img-top" src="<%= activity.image %>" alt="picture">
-              <div class="card-body">
-              <h3 class="card-title"><%= activity.name %></h3>
-              <p class="card-text"><%= activity.description %></p>
-                <div class="card-link">
-                  <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
-                  <%= render 'users/liked_button', activity: activity %>
-                  <% end %>
-                  <div>
-                    <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+
+      <%# need to link user-personality and activities  %>
+      <div class="recommendation">
+        <h2>Recommended Activities</h2>
+        <div class="user-favourites">
+          <% activities = [Activity.find(3), Activity.find(15), Activity.find(22)] %>
+            <% activities.each do |activity| %>
+              <div class="card">
+                <img class="card-img-top" src="<%= activity.image %>" alt="picture">
+                <div class="card-body">
+                  <h3 class="card-title"><%= activity.name %></h3>
+                  <div class="card-link">
+                    <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
+                    <%= render 'users/like_button', activity: activity %>
+                    <% end %>
+                    <div>
+                      <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                    </div>
                   </div>
                 </div>
-           </div>
-          </div>
-         <% end %>
+              </div>
+              <% end %>
+        </div>
       </div>
+
+      <div class="favourite">
+        <h2>Your Favourite Activities </h2>
+        <div class="user-favourites">
+            <% current_user.all_favorited.each do |activity| %>
+              <div class="card">
+                <img class="card-img-top" src="<%= activity.image %>" alt="picture">
+                <div class="card-body">
+                <h3 class="card-title"><%= activity.name %></h3>
+                  <div class="card-link">
+                    <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
+                    <%= render 'users/liked_button', activity: activity %>
+                    <% end %>
+                    <div>
+                      <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                    </div>
+                  </div>
+            </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

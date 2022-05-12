@@ -7,7 +7,6 @@ h1{
   border-style: solid;
   border-radius: 10px;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .personality-img{
@@ -22,9 +21,6 @@ ul li {
   display:inline;
 }
 
-h2{
-  padding-bottom: 20px;
-}
 
 .card {
   height: auto;
@@ -62,4 +58,15 @@ h2{
   color: red;
   font-size: 26px;
   transition: 0.5s;
+}
+
+h2{
+  padding-bottom: 20px;
+}
+.recommendation{
+  padding-top: 150px;
+}
+
+.favourite{
+  padding-top: 150px;
 }
