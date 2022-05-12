@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   # User signup with personality attached
   # Check devise docs
+  get '/results', to: 'pages#results', as: :results
 
   # Share your results
   post '/quiz', to: 'pages#share', as: :share

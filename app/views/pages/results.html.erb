@@ -1,0 +1,36 @@
+<%# This is for the result page after doing the quiz.
+We don't have a route for this yet and..
+How to link with this page to traits and personality if the user doesn't sign in yet
+(We will show result first and user signs in later and we link the user result to profile) %>
+
+
+
+<div class="container">
+  <div class="container result-pg-personality">
+    <h4>Your result</h4>
+    <h1>You are a PLACERHOLDER </h1>
+    <div class="container personality-image">
+      <p>PLACERHOLDER FOR IMAGE</p>
+    </div>
+    <h4>You traits: PLACEHOLDER</h4>
+  </div>
+
+  <div class="container activities-suggestion">
+    <h2>Here are the activities that might interest you</h2>
+    <div class="cards">
+      <% @activities.each do |activity| %>
+        <div class="card">
+          <img class="card-img-top" src="<%= activity.image %>" alt="picture">
+          <div class="card-body">
+            <h3 class="card-title"><%= activity.name %></h3>
+            <p class="card-text"><%= activity.description.truncate_words(20) %></p>
+            <div class="card-link">
+              <i class="far fa-heart"></i>
+              <a href="<%= activity_path(activity) %>" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
