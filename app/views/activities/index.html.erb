@@ -48,23 +48,12 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12 justify-centre">
-      <div class="title">
-      <h3>Search</h3>
-      <h3>Activity Type</h3>
-      </div>
-      <div class="search-bars">
-            <div class="search-box">
-            <%= form_tag activities_path, method: :get do %>
-              <%= text_field_tag :query,
-                  params[:query],
-                  class: "form-control",
-                  placeholder: "Find an activity"
-                %>
-            </div>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
-            <% end %>
 
-          <div class="search-box">
+    <div class="d-flex justify-content-between m-4" >
+      <div class="search-bar">
+      <h3>Search</h3>
+      <div class="d-flex">
+        <div class="search-box">
             <%= form_tag activities_path, method: :get do %>
               <%= text_field_tag :query,
                   params[:query],
@@ -72,9 +61,32 @@
                   placeholder: "Find an activity"
                 %>
             </div>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <div>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+            </div>
             <% end %>
       </div>
+    </div>
+
+    <div class="activity-type-bar">
+      <h3>Activity Type</h3>
+      <div class="d-flex">
+        <div class="search-box">
+            <%= form_tag activities_path, method: :get do %>
+              <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control",
+                  placeholder: "Find an activity"
+                %>
+            </div>
+            <div>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+            </div>
+            <% end %>
+      </div>
+    </div>
+    </div>
+
 
       <div class="main-container">
         <div class="cards">
@@ -84,15 +96,14 @@
               <div class="card-body">
               <h3 class="card-title"><%= activity.name %></h3>
               <p class="card-text"><%= activity.description %></p>
-              <div class="card-link">
-              <%# need to figure out how to embed icon in link_to %>
-                <%# <%= link_to "like", toggle_favorite_activity_path(activity), remote: true, method: :post %>
-                <%# <i class="far fa-heart"></i> %>
-                <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
-                <%= render 'activities/like_button', activity: activity %>
-                <% end %>
-                <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
-              </div>
+                <div class="card-link">
+                  <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
+                  <%= render 'activities/like_button', activity: activity %>
+                  <% end %>
+                  <div>
+                    <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                  </div>
+                </div>
            </div>
           </div>
           <% end %>
