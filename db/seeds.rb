@@ -24,5 +24,7 @@ csv_file_2 = 'lib/assets/personality_database.csv'
 CSV.foreach(csv_file_2, headers: :first_row, header_converters: :symbol) do |row|
   row[:id] = row[:id].to_i # Convert column to Integer
   row[:name] = row[:name]   # Convert column to boolean
+  row[:description] = row[:description]
+  row[:image] = row[:image]
   @personalities << Personality.create(row)
 end
