@@ -28,3 +28,6 @@ CSV.foreach(csv_file_2, headers: :first_row, header_converters: :symbol) do |row
   row[:image] = row[:image]
   @personalities << Personality.create(row)
 end
+
+# fake user
+User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_id: 1)

@@ -1,5 +1,5 @@
 <div class="like-icon mx-2
   <%= "fa-heart-clicked" if current_user.favorited?(activity) %>"
   data-id="<%= activity.id %>">
-  <i class="fas fa-heart heart"></i>
+  <i class="fas fa-heart heart <%= "fa-heart-clicked" if current_user.favorited?(activity) %>"></i>
 </div>

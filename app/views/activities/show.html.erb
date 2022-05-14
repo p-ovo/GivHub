@@ -1,23 +1,25 @@
-<div class="container activity-main" style="padding-top: 10%">
-  <div class="activity-image">
-    <img src="<%= @activity.image %>" alt="" width=100%/>
+<div class="activity-show-background">
+  <div class="container activity-main" style="padding-top: 10%">
+    <div class="activity-image">
+      <img src="<%= @activity.image %>" alt="" width=100%/ class="activity-image">
+    </div>
+    <div class="activity-name">
+      <h1><%= @activity.name %></h1>
+    </div>
+    <div class="activity-description">
+      <p><%= @activity.description %></p>
+    </div>
   </div>
-  <div class="activity-name">
-    <h1><%= @activity.name %></h1>
-  </div>
-  <div class="activity-description">
-    <p><%= @activity.description %></p>
-  </div>
-</div>
 
-<div class="container activity-orgs ">
-  <div class="org-text"></div>
-    <h1>Connect with these organisations</h1>
-  </div>
-  <div class="container org-list">
-  <ul>
-    <p><li>Organisation ABC</li></p>
-    <p><li>Organisation XYZ</li></p>
-  </ul>
+  <div class="container activity-orgs ">
+    <div class="org-text"></div>
+      <h1>Connect with these organisations</h1>
+    </div>
+    <div class="container org-list">
+    <ul>
+      <p><li>Organisation ABC</li></p>
+      <p><li>Organisation XYZ</li></p>
+    </ul>
 
+  </div>
 </div>
