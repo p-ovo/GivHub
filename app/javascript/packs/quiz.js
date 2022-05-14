@@ -34,7 +34,7 @@ jQuery(function () {
 
     if ($(this).parent().parent().attr("id") == "q10") {
       let personality = calcPersonality();
-      $(this).parent().parent().attr("personality", personality);
+      $(this).parent().parent().attr("personality_id", personality);
     };
   });
 
@@ -78,9 +78,13 @@ jQuery(function () {
   };
 
   function calcPersonality() {
-    let random_no = Math.floor(Math.random() * ( Object.keys(personalities).length - 1))
-    let result = Object.keys(personalities)[random_no];
-    console.log(result);
-    return result;
+    // let random_no = Math.floor(Math.random() * ( Object.keys(personalities).length - 1))
+    // let result = Object.keys(personalities)[random_no];
+    // console.log(result);
+    // return result;
+
+
+    // Returning beastmaster for mid demo:
+    return "3"
   };
 });
