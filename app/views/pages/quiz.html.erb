@@ -6,9 +6,9 @@
       <h1 style="text-align: center;">1. You're stranded on an island. What's the first thing you do?</h1>
     </div>
     <div class="d-flex justify-content-around align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Go for a swim then run around the island</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Try and find other humans - I don't want to be alone!</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Figure out how to find help and get me outta here</button>
+      <button data-id="outdoors" class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Go for a swim then run around the island</button>
+      <button data-id="teamwork" class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Try and find other humans - I don't want to be alone!</button>
+      <button data-id="problem_solver" class="btn btn-outline-dark" onClick="document.getElementById('q2').scrollIntoView()">Figure out how to find help and get me outta here</button>
     </div>
     <div class="" style="height: 10%;">
   </div>
@@ -18,12 +18,12 @@
       <h1 style="text-align: center;">2. Which pair of emojis do you relate to the most?</h1>
     </div>
     <div class="d-flex justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🏃🏻‍♂️🏄</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">📚✍️</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">👩🏻‍💻🧠</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🎨🎼</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🐶🐱</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🌴🌎</button>
+      <button data-id="outdoors" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🏃🏻‍♂️🏄</button>
+      <button data-id="skilled_worker" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">📚✍️</button>
+      <button data-id="problem_solver" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">👩🏻‍💻🧠</button>
+      <button data-id="imaginative" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🎨🎼</button>
+      <button data-id="animal_lover" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🐶🐱</button>
+      <button data-id="nature_lover" class="btn btn-outline-dark" onClick="document.getElementById('q3').scrollIntoView()">🌴🌎</button>
     </div>
   </div>
   <div id="q3" class="row vh-100" style="background-color: #91C483;">
@@ -32,10 +32,10 @@
       <h1 style="text-align: center;">3. Who would you invite to your dinner?</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Bill Gates</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Frida Kahlo</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Martin Luther King</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Oprah Winfrey</button>
+      <button data-id="problem_solver" class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Bill Gates</button>
+      <button data-id="imaginative" class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Frida Kahlo</button>
+      <button data-id="leadership" class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Martin Luther King</button>
+      <button data-id="compassionate" class="btn btn-outline-dark" onClick="document.getElementById('q4').scrollIntoView()">Oprah Winfrey</button>
     </div>
   </div>
   <div id="q4" class="row vh-100" style="background-color: #FFE162;">
@@ -44,9 +44,9 @@
       <h1 style="text-align: center;">4. At a party, you saw the last piece of 🍰 on the table, you...</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Give it to someone who hasn't had one</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Cut in half and share</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Keep it to yourself (and eat it discreetly)</button>
+      <button data-id="donation" class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Give it to someone who hasn't had one</button>
+      <button data-id="problem_solver" class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Cut in half and share</button>
+      <button data-id="self-management" class="btn btn-outline-dark" onClick="document.getElementById('q5').scrollIntoView()">Keep it to yourself (and eat it discreetly)</button>
     </div>
   </div>
   <div id="q5" class="row vh-100" style="background-color: #FF6464;">
@@ -55,9 +55,9 @@
       <h1 style="text-align: center;">5. You broke up with the love of your life, how long does it take you over it?</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Easy! It would take 7 days max</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Self-care and do my favourite things</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Straight to Tinder, swipe right, go on dates!</button>
+      <button data-id="resilience" class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Easy! It would take 7 days max</button>
+      <button data-id="compassionate" class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Self-care and do my favourite things</button>
+      <button data-id="teamwork" class="btn btn-outline-dark" onClick="document.getElementById('q6').scrollIntoView()">Straight to Tinder, swipe right, go on dates!</button>
     </div>
   </div>
   <div id="q6" class="row vh-100" style="background-color: #91C483;">
@@ -66,8 +66,8 @@
       <h1 style="text-align: center;">6. Do you talk more than you listen?</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q7').scrollIntoView()">Yes. I'm just full of clever ideas!</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q7').scrollIntoView()">No. I'm a thinker, not a talker</button>
+      <button data-id="communicator" class="btn btn-outline-dark" onClick="document.getElementById('q7').scrollIntoView()">Yes. I'm just full of clever ideas!</button>
+      <button data-id="self-management" class="btn btn-outline-dark" onClick="document.getElementById('q7').scrollIntoView()">No. I'm a thinker, not a talker</button>
     </div>
   </div>
   <div id="q7" class="row vh-100" style="background-color: #FFE162;">
@@ -76,9 +76,9 @@
       <h1 style="text-align: center;">7. How often do you want to give back?</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">As much as I can, make it part of my lifestyle</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">From time to time</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">Just want to try once (no judgement)</button>
+      <button data-id="committed" class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">As much as I can, make it part of my lifestyle</button>
+      <button data-id="committed" class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">From time to time</button>
+      <button data-id="na" class="btn btn-outline-dark" onClick="document.getElementById('q8').scrollIntoView()">Just want to try once (no judgement)</button>
     </div>
   </div>
   <div id="q8" class="row vh-100" style="background-color: #FF6464;">
@@ -87,11 +87,11 @@
       <h1 style="text-align: center;">8. Which Marvel character are you?</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Hulk</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Captain America</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Spiderman</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Groot</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Ironman</button>
+      <button data-id="outdoors" class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Hulk</button>
+      <button data-id="leadership" class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Captain America</button>
+      <button data-id="animal_lover" class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Spiderman</button>
+      <button data-id="nature_lover" class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Groot</button>
+      <button data-id="skilled_worker" class="btn btn-outline-dark" onClick="document.getElementById('q9').scrollIntoView()">Ironman</button>
     </div>
   </div>
   <div id="q9" class="row vh-100" style="background-color: #91C483;">
@@ -100,8 +100,8 @@
       <h1 style="text-align: center;">9. You're at a party, you are...</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q10').scrollIntoView()">The center of the party</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('q10').scrollIntoView()">In the corner, wishing it was home time</button>
+      <button data-id="communicator" class="btn btn-outline-dark" onClick="document.getElementById('q10').scrollIntoView()">The center of the party</button>
+      <button data-id="self-management" class="btn btn-outline-dark" onClick="document.getElementById('q10').scrollIntoView()">In the corner, wishing it was home time</button>
     </div>
   </div>
   <div id="q10" class="row vh-100" style="background-color: #FFE162;">
@@ -110,8 +110,20 @@
       <h1 style="text-align: center;">10. When you get an error in your code, do you...</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 60%;">
-      <button class="btn btn-outline-dark" onClick="document.getElementById('').scrollIntoView()">Pay / Ask someone to fix it for me</button>
-      <button class="btn btn-outline-dark" onClick="document.getElementById('').scrollIntoView()">Try debug yourself - Stackoverflow, Documentation</button>
+      <button data-id="donation" class="btn btn-outline-dark">Pay / Ask someone to fix it for me</button>
+      <button data-id="resilience" class="btn btn-outline-dark">Try debug yourself - Stackoverflow, Documentation</button>
   </div>
   <%# </div> %>
+
+  <script>
+    function get_value() {
+      let x = $("#q10").attr("personality_id");
+      console.log(x);
+      window.location = '/users/sign_up?personality_id=' + x;
+    };
+  </script>
+
+  <button class="btn btn-dark" onClick="get_value()">Get results!</button>
 </div>
+
+<%= javascript_pack_tag 'quiz' %>
