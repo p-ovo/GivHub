@@ -98,8 +98,10 @@
                 <h3 class="card-title"><%= activity.name %></h3>
                 <p class="card-text"><%= activity.description.truncate_words(20) %></p>
                   <div class="card-link">
+                   <% if user_signed_in? %>
                     <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
                     <%= render 'activities/like_button', activity: activity %>
+                    <% end %>
                     <% end %>
                     <div>
                       <a href="<%= activity_path(activity) %>" class="btn-card">Check This Activity</a>
