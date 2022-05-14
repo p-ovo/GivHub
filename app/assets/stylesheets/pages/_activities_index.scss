@@ -1,0 +1,151 @@
+//carousel
+img{
+  object-fit: cover;
+}
+
+.d-block{
+  height: 500px;
+}
+
+// #clip{
+//   position: absolute;
+//   clip: rect(0, 100px, 200px, 0);
+// }
+
+
+.background-color{
+  background-color: #bee9b2;
+}
+// search bar
+// .title{
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding-top: 30px;
+// }
+// .search-bars{
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+.search-box{
+  width: 400px;
+  display: inline;
+}
+
+.form-control{
+  border-radius: 20px !important;
+  border: 1px solid #000 !important;
+}
+
+.btn{
+  display: inline;
+}
+
+.btn-search{
+  margin-left: 10px;
+  width: 100px;
+  background-color: #91c483;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.btn-search:hover{
+  text-decoration: none;
+  color: black;
+  background-color:#00ff6e;
+}
+
+// card
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px !important;
+}
+.card {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bolder;
+  border: 1px solid #000 !important;
+  border-radius: 20px !important;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-card{
+  margin-left: 10px;
+  width: 100px;
+  background-color: #91c483;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 10px 5px;
+  color: black;
+}
+
+.btn-card:hover{
+  text-decoration: none;
+  color: black;
+  background-color:#00ff6e;
+}
+
+.card-text{
+  font-weight: 300;
+}
+
+
+
+
+// cards
+.main-container{
+  padding-top: 50px;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
