@@ -1,8 +1,10 @@
+
+<div class="background-color-profile">
 <br><br><br><br><br>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-10">
-      <h1>Hey, <%= current_user.name %></h1>
+      <h1 class="greeting">Hey, <%= current_user.name %></h1>
       <div class="user-personality">
       <%# Please check if @personality.name/image/description is the right linkage to user%>
         <h2>You are <%= @personality.name %></h2>
@@ -13,7 +15,9 @@
           <li> #trait 2 |</li>
           <li> #trait 3</li></h4>
         </ul>
-        <p><%= @personality.description %></p>
+        <div class="personality-description">
+          <p><%= @personality.description %></p>
+        </div>
       </div>
 
       <%# need to link user-personality and activities  %>
@@ -31,7 +35,7 @@
                     <%= render 'users/like_button', activity: activity %>
                     <% end %>
                     <div>
-                      <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                      <a href="<%= activity_path(activity) %>" class="btn-recommended">Check This Activity</a>
                     </div>
                   </div>
                 </div>
@@ -53,7 +57,7 @@
                     <%= render 'users/liked_button', activity: activity %>
                     <% end %>
                     <div>
-                      <a href="<%= activity_path(activity) %>" class="btn btn-primary">Check This Activity</a>
+                      <a href="<%= activity_path(activity) %>" class="btn-recommended">Check This Activity</a>
                     </div>
                   </div>
             </div>
@@ -64,4 +68,5 @@
 
     </div>
   </div>
+</div>
 </div>

@@ -1,4 +1,7 @@
-h1{
+.background-color-profile{
+  background-color: #fdea96;
+}
+.greeting{
   padding-bottom: 50px;
 }
 .user-personality{
@@ -7,20 +10,26 @@ h1{
   border-style: solid;
   border-radius: 10px;
   text-align: center;
+  background-color:#f7f3e4;
 }
 
 .personality-img{
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  margin: 10px;
+  margin-bottom: 25px;
 }
 
 ul li {
   display:inline;
 }
 
+.personality-description{
+  margin-top: 40px;
+  padding: 0px 150px;
+  font-size: 20px;
+}
 
 .card {
   height: auto;
@@ -69,4 +78,36 @@ h2{
 
 .favourite{
   padding-top: 150px;
+}
+
+// button
+.btn-recommended{
+  margin-left: 10px;
+  width: 100px;
+  background-color: #FFE162;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 5px;
+  color: black;
+}
+
+.btn-recommended:hover{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 238, 0);
+}
+
+.btn-favourite{
+  margin-left: 10px;
+  width: 100px;
+  background-color: #91c483;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.btn-favourite:hover{
+  text-decoration: none;
+  color: black;
+  background-color:#00ff6e;
 }
