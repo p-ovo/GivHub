@@ -29,5 +29,24 @@ CSV.foreach(csv_file_2, headers: :first_row, header_converters: :symbol) do |row
   @personalities << Personality.create(row)
 end
 
+csv_file_3 = 'lib/assets/Type_CSV.csv'
+@types = []
+CSV.foreach(csv_file_3, headers: :first_row, header_converters: :symbol) do |row|
+  row[:id] = row[:id].to_i # Convert column to Integer
+  row[:name] = row[:name]   # Convert column to boolean
+  row[:image] = row[:image]
+  @types << Type.create(row)
+end
+
+csv_file_4 = 'lib/assets/Filter_CSV.csv'
+@filters = []
+CSV.foreach(csv_file_4, headers: :first_row, header_converters: :symbol) do |row|
+  row[:id] = row[:id].to_i # Convert column to Integer
+  row[:activity_id] = row[:activity_id].to_i   # Convert column to Integer
+  row[:type_id] = row[:type_id].to_i   # Convert column to Integer
+  @filters << Filter.create(row)
+end
+
+
 # fake user
 User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_id: 1)
