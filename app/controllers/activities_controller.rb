@@ -1,11 +1,13 @@
 class ActivitiesController < ApplicationController
 before_action :authenticate_user!, only: :toggle_favorite
   def index
-    if params[:query].present?
-      @activities = Activity.global_search(params[:query])
+    @type = Type.find_by(name: params[:type])
+    if @type
+      @activities = Activity.joins(:types).where(types: {id: @type.id})
     else
       @activities = Activity.all
     end
+    @activities = @activities.global_search(params[:query]) if params[:query].present?
   end
 
   def show
@@ -30,7 +32,7 @@ before_action :authenticate_user!, only: :toggle_favorite
 
   def clicked?
     @activity = Activity.find_by(id: params[:id])
-    @favourite = current_user.favorited?(@activity) ? 'fa-heart-clicked': 'fa-heart'
+    @favourite = current_user.favorited?(@activity) ? 'fa-heart-clicked' : 'fa-heart'
   end
 
   private

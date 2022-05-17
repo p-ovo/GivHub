@@ -4,6 +4,8 @@
 .greeting{
   padding-bottom: 50px;
 }
+
+// personality card
 .user-personality{
   padding-top: 50px;
   padding-bottom: 50px;
@@ -31,6 +33,7 @@ ul li {
   font-size: 20px;
 }
 
+// cards
 .card {
   height: auto;
   display: flex;
@@ -50,7 +53,7 @@ ul li {
   margin-top: auto;
 }
 
-.user-favourites{
+.profile-cards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
@@ -69,7 +72,8 @@ ul li {
   transition: 0.5s;
 }
 
-h2{
+// formatting
+.profile-titles{
   padding-bottom: 20px;
 }
 .recommendation{

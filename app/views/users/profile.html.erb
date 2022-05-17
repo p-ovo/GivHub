@@ -22,8 +22,8 @@
 
       <%# need to link user-personality and activities  %>
       <div class="recommendation">
-        <h2>Recommended Activities</h2>
-        <div class="user-favourites">
+        <h2 class="profile-titles">Recommended Activities</h2>
+        <div class="profile-cards">
           <% activities = [Activity.find(1), Activity.find(4), Activity.find(8), Activity.find(22)] %>
             <% activities.each do |activity| %>
               <div class="card">
@@ -45,8 +45,8 @@
       </div>
 
       <div class="favourite">
-        <h2>Your Favourite Activities </h2>
-        <div class="user-favourites">
+        <h2 class="profile-titles">Your Favourite Activities </h2>
+        <div class="profile-cards">
             <% current_user.all_favorited.each do |activity| %>
               <div class="card">
                 <img class="card-img-top" src="<%= activity.image %>" alt="picture">

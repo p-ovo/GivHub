@@ -1,3 +1,8 @@
+// nav-bar
+.activities-nav-bar{
+  background-color: #bee9b2;
+}
+
 //carousel
 img{
   object-fit: cover;
@@ -7,25 +12,10 @@ img{
   height: 500px;
 }
 
-// #clip{
-//   position: absolute;
-//   clip: rect(0, 100px, 200px, 0);
-// }
-
-
 .background-color{
   background-color: #bee9b2;
 }
-// search bar
-// .title{
-//   display: flex;
-//   justify-content: space-evenly;
-//   padding-top: 30px;
-// }
-// .search-bars{
-//   display: flex;
-//   justify-content: space-evenly;
-// }
+
 .search-box{
   width: 400px;
   display: inline;
@@ -75,6 +65,10 @@ img{
   flex-direction: column;
 }
 
+.card-text{
+  font-weight: 300;
+}
+
 .card-link{
   display: flex;
   justify-content: space-between;
@@ -82,6 +76,8 @@ img{
   margin-bottom: 15px;
 }
 
+
+// buttons
 .btn-card{
   margin-left: 10px;
   width: 100px;
@@ -98,11 +94,6 @@ img{
   background-color:#00ff6e;
 }
 
-.card-text{
-  font-weight: 300;
-}
-
-
 
 
 // cards
@@ -111,7 +102,7 @@ img{
 }
 .cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
 }
 
