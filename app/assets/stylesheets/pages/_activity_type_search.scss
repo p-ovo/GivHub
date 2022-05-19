@@ -1,0 +1,44 @@
+.solo{
+  background-image: url("https://cdn-icons.flaticon.com/png/512/666/premium/666201.png?token=exp=1652786047~hmac=e9ffee4ee78059852bd33b26752f6ced");
+}
+
+.activity-filter {
+  padding: 10px 20px;
+  display: inline-block;
+  // border: 2px solid black;
+  border-radius: 50px;
+  color: black;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+    // background: black;
+    // color: white;
+  }
+}
+
+.activity-filter.active {
+  border: 2px solid black;
+  color: black;
+  background-color: #91c483;;
+}
+
+.type-image{
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin:0 auto;
+}
+
+.icon{
+  margin:auto;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}

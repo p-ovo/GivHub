@@ -3,7 +3,7 @@ before_action :authenticate_user!, only: :toggle_favorite
   def index
     @type = Type.find_by(name: params[:type])
     if @type
-      @activities = Activity.joins(:types).where(types: {id: @type.id})
+      @activities = Activity.joins(:types).where(types: {id: @type.id} )
     else
       @activities = Activity.all
     end

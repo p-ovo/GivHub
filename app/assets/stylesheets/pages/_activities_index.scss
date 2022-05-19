@@ -16,8 +16,13 @@ img{
   background-color: #bee9b2;
 }
 
+
+//search bar
+.search-bar{
+  margin-bottom: 132px;
+}
 .search-box{
-  width: 400px;
+  width: 100%;
   display: inline;
 }
 
@@ -76,6 +81,10 @@ img{
   margin-bottom: 15px;
 }
 
+.main-container{
+  margin-top: 100px;
+}
+
 
 // buttons
 .btn-card{
@@ -105,6 +114,8 @@ img{
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
 }
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
