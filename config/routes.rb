@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   end
 
 
+
+
   # User signup with personality attached
   # Check devise docs
 

@@ -2,6 +2,9 @@ class Activity < ApplicationRecord
   acts_as_favoritable
   belongs_to :organisation
   has_many :tags, dependent: :destroy
+  has_many :filters, dependent: :destroy
+  has_many :types, through: :filters
+
   validates :name, :description, presence: true
 
   include PgSearch::Model
