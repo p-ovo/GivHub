@@ -1,6 +1,8 @@
-.icon{
-  font-family: 'Fredoka One', cursive;
-}
+// .icon{
+//   // font-family: 'Fredoka One', cursive;
+//   font-size: 12px;
+//   font-weight: bold;
+// }
 
 .activity-filter {
   padding: 10px 20px;
@@ -11,6 +13,7 @@
   margin-right: 5px;
   margin-bottom: 5px;
   text-decoration: none;
+  vertical-align: top;
 
   &:hover {
     text-decoration: none;
@@ -34,11 +37,17 @@
 }
 
 .icon{
+  font-size: 12px;
+  font-weight: normal;
   margin:auto;
   display: flex;
   width: 50px;
   height: 50px;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  align-items:flex-start;
+}
+
+.card-container {
+  padding-top: 100px;
 }
