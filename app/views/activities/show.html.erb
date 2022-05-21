@@ -1,11 +1,11 @@
 <div class="activity-show-background">
 <%= render '/shared/navbar' %>
-  <div class="container activity-main" style="padding-top: 10%">
-    <div class="activity-image">
-      <img src="<%= @activity.image %>" alt="" width=100%/ class="activity-image">
-    </div>
+  <div class="container activity-main" >
     <div class="activity-name">
       <h1><%= @activity.name %></h1>
+    </div>
+    <div class="activity-image">
+      <img src="<%= @activity.image %>" alt="" width=100%/ class="activity-image">
     </div>
     <div class="activity-description">
       <p><%= @activity.description %></p>
