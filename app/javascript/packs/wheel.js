@@ -1,4 +1,4 @@
-jQuery(function () {
+$(function () {
   // first iteration
   let position = -20;
   let count = 0;
