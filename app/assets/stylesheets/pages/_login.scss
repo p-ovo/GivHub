@@ -1,0 +1,81 @@
+.background-signup {
+  background-color: #FFE161;
+  //can't get the background to work :(
+  background-image: url('../images/bg_signin.png');
+}
+
+.background-login {
+  background-color: #61ffe7;
+  //can't get the background to work :(
+  background-image: url('../images/bg_login.png');
+}
+
+.form-border {
+  border: 5px solid #000;
+  border-radius: 10px;
+  padding: 50px 40px 50px 40px;
+  margin-top: -50px;
+  width: 500px;
+}
+
+.signin-login {
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.input-fields {
+  width: 400px;
+  height: 30px;
+  border: none;
+  border-bottom-style: dotted;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  background-color: transparent;
+}
+
+.input-fields:focus {
+  // border: none;
+  outline: none;
+  border-bottom-style: dotted;
+}
+
+.text {
+  font-weight: 900;
+}
+
+.form-button-submit {
+  display: inline-block;
+  width: auto;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px;
+  background: none;
+  border-radius: 30px;
+  color: black;
+  width: 100px;
+  text-align: center;
+  border: 2px solid #000;
+}
+
+.form-button-submit:hover {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+.form-link-login {
+  margin-top: 30px;
+  font-weight: 500;
+  color: black;
+  text-decoration: underline;
+}
+
+.form-link-login:hover {
+  font-weight: 500;
+  color: black;
+  text-transform: none;
+}
