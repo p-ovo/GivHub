@@ -20,11 +20,15 @@ img{
 
 //search bar
 .search-bar{
+  margin-top: 70px;
+  width: 50%;
   margin-bottom: 132px;
+  justify-content: center;
 }
 .search-box{
   width: 100%;
   display: inline;
+  justify-content: center;
 }
 
 .form-control{
@@ -69,6 +73,10 @@ img{
 .card-body{
   display: flex;
   flex-direction: column;
+}
+
+.card-title{
+  font-family: 'Fredoka One', cursive;
 }
 
 .card-text{
