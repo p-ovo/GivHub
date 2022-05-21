@@ -18,11 +18,9 @@ ActiveRecord::Schema.define(version: 2022_05_17_115631) do
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.bigint "organisation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
-    t.index ["organisation_id"], name: "index_activities_on_organisation_id"
   end
 
   create_table "archetypes", force: :cascade do |t|
@@ -72,8 +70,11 @@ ActiveRecord::Schema.define(version: 2022_05_17_115631) do
 
   create_table "organisations", force: :cascade do |t|
     t.string "name"
+    t.text "url"
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_organisations_on_activity_id"
   end
 
   create_table "personalities", force: :cascade do |t|
@@ -130,13 +131,13 @@ ActiveRecord::Schema.define(version: 2022_05_17_115631) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "activities", "organisations"
   add_foreign_key "archetypes", "personalities"
   add_foreign_key "archetypes", "traits"
   add_foreign_key "favourites", "activities"
   add_foreign_key "favourites", "users"
   add_foreign_key "filters", "activities"
   add_foreign_key "filters", "types"
+  add_foreign_key "organisations", "activities"
   add_foreign_key "tags", "activities"
   add_foreign_key "tags", "traits"
   add_foreign_key "users", "personalities"
