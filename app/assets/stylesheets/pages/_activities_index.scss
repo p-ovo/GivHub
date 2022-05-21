@@ -1,7 +1,8 @@
-// nav-bar
-.activities-nav-bar{
-  background-color: #bee9b2;
+//
+.activities-container{
+  font-family: 'Fredoka One', cursive;
 }
+
 
 //carousel
 img{
@@ -14,21 +15,26 @@ img{
 
 .background-color{
   background-color: #bee9b2;
+  margin: 0;
 }
 
 
 //search bar
 .search-bar{
+  margin-top: 70px;
+  width: 50%;
   margin-bottom: 132px;
+  justify-content: center;
 }
 .search-box{
   width: 100%;
   display: inline;
+  justify-content: center;
 }
 
 .form-control{
   border-radius: 20px !important;
-  border: 1px solid #000 !important;
+  border: 3px solid #000 !important;
 }
 
 .btn{
@@ -40,7 +46,7 @@ img{
   width: 100px;
   background-color: #91c483;
   border-radius: 30px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   padding: 5px;
 }
 
@@ -61,7 +67,7 @@ img{
   display: flex;
   justify-content: space-around;
   font-weight: bolder;
-  border: 1px solid #000 !important;
+  border: 2px solid #000 !important;
   border-radius: 20px !important;
 }
 
@@ -70,8 +76,12 @@ img{
   flex-direction: column;
 }
 
+.card-title{
+  //font-family: 'Fredoka One', cursive;
+}
+
 .card-text{
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .card-link{
@@ -92,7 +102,7 @@ img{
   width: 100px;
   background-color: #91c483;
   border-radius: 30px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   padding: 10px 5px;
   color: black;
 }
