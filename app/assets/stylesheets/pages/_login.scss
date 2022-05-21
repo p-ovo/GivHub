@@ -1,20 +1,22 @@
 .background-signup {
-  background-color: #FFE161;
   //can't get the background to work :(
-  background-image: url('../images/bg_signin.png');
+  background-image: url('bg_signup.png');
+  background-attachment: fixed;
+  background-size:cover;
 }
 
 .background-login {
-  background-color: #61ffe7;
   //can't get the background to work :(
-  background-image: url('../images/bg_login.png');
+  background-image: url('bg_login.png');
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .form-border {
   border: 5px solid #000;
   border-radius: 10px;
   padding: 50px 40px 50px 40px;
-  margin-top: -50px;
+  margin-top: -30px;
   width: 500px;
 }
 
