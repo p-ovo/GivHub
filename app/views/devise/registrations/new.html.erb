@@ -7,10 +7,20 @@
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name))  do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
+
+<div class="container">
+<%= render '/shared/navbar' %>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <h2>Sign up</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
             <div class="field">
               <%= f.label :name, class: 'text' %><br />
               <%= f.text_field :name, class: 'input-fields', placeholder: "", autofocus: true, autocomplete: "Username"%>
             </div>
+
 
             <div class="field">
               <%= f.label :email, class: 'text'  %><br />
