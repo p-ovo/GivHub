@@ -1,26 +1,26 @@
 <div class="background-color">
   <%= render '/shared/navbar' %>
-  <div class="activities-container">
+  <div class="container">
     <div class="row">
       <div class="col-lg-12 d-flex justify-content-center">
 
           <div class="search-bar">
-            <h3>Search</h3>
-            <div class="d-flex">
+            <h1 class="search-title"><span style="background-color: #BEE9B2"></span></h1>
+            <div class="d-flex search-border">
             <div class="search-box">
               <%= form_tag activities_path, method: :get do %>
                 <%= text_field_tag :query,
                     params[:query],
                     class: "form-control",
-                    placeholder: "Find an activity"
+                    placeholder: "Explore "
                   %>
             </div>
               <div>
-                <%= submit_tag "Search", class: "btn-search" %>
+                <%= submit_tag "Go", class: "btn-search" %>
               </div>
               <% end %>
           </div>
-       
+
     </div>
   </div>
   </div>
