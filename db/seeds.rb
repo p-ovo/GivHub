@@ -6,15 +6,15 @@
 
 require 'csv'
 Activity.destroy_all
-organisation1 = Organisation.create(name: "Organisation1")
-csv_file = 'lib/assets/activity_database.csv'
+# organisation1 = Organisation.create(name: "Organisation1")
+csv_file = 'lib/assets/Activity_seed_CSV.csv'
 @activities = []
 CSV.foreach(csv_file, headers: :first_row, header_converters: :symbol) do |row|
   row[:id] = row[:id].to_i # Convert column to Integer
   row[:name] = row[:name]   # Convert column to boolean
   row[:description] = row[:description]
   row[:image] = row[:image]
-  row[:organisation] = organisation1
+  # row[:organisation] = organisation1
   @activities << Activity.create(row)
 end
 
@@ -50,3 +50,6 @@ end
 
 # fake user
 User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_id: 1)
+
+#fake orgnaisation
+Organisation.create(name:"Test organisation", url:"#", activity_id:1)

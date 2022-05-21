@@ -1,4 +1,4 @@
 class Organisation < ApplicationRecord
-  has_many :activities, dependent: :destroy
+  belongs_to :activity
   validates :name, presence: true
 end
