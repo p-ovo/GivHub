@@ -1,3 +1,7 @@
+.background-wheel {
+  background-color: #EEEEEE;
+}
+
 .body {
   height: 600px;
   margin: 0;
@@ -23,22 +27,29 @@ main#carousel {
   // pointer-events: none;
 }
 
+
 .wheel-image {
   display: block;
-  width: 250px;
-  height: 150px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 296px;
+  height: 250px;
+  border-radius: 30px 30px 0 0;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
-div.item h2 {
-  margin-top: 10px;
-  height: 120px;
+div.item h3 {
+  // margin-top: 10px;
+  height: 50px;
+  font-size: 25px;
+  // padding: 10px;
 }
 
 div.item {
-  text-align: center;
+  // text-align: center;
+  border: 2px solid #000;
+  border-radius: 30px;
   position: absolute;
+  // padding: 20px;
   width: 300px;
   height: 400px;
   background-color: coral;
@@ -49,65 +60,266 @@ div.item {
   z-index: calc((var(--position) - var(--abs)));
 }
 
+div.item-text {
+  margin: 10px 20px;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.wheel-card-btn {
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 30px;
+  border: 2px solid #000;
+  padding: 5px 5px;
+  color: black;
+  position: relative;
+  top: 20px;
+}
+
+.wheel-card-btn:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+  }
+
+.spin-button {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(42, 42, 42);
+  font-size: 20px;
+  // border: 5px solid #000;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.spin-button:hover {
+  color: white;
+  background-color: black;
+  text-transform: none;
+}
+
+
+//*** CARDS WITH CONSISTENT BRANDING COLORS***
+
 div.item:nth-of-type(1) {
   --offset: 1;
-  background-color: #90f1ef;
+  background-color: #FFE162;
 }
 
 div.item:nth-of-type(2) {
   --offset: 2;
-  background-color: #ff70a6;
+  background-color: #FF6464;
 }
 
 div.item:nth-of-type(3) {
   --offset: 3;
-  background-color: #ff9770;
+  background-color: #91C483;
 }
 
 div.item:nth-of-type(4) {
   --offset: 4;
-  background-color: #ffd670;
+  background-color: #FFE162;
 }
 
 div.item:nth-of-type(5) {
   --offset: 5;
-  background-color: #e9ff70;
+  background-color: #FF6464;
 }
 
 div.item:nth-of-type(6) {
   --offset: 6;
-  background-color: #FFC0CB;
+  background-color: #91C483;
 }
 
 div.item:nth-of-type(7) {
   --offset: 7;
-  background-color: #C284FF;
+  background-color: #FFE162;
 }
 
 div.item:nth-of-type(8) {
   --offset: 8;
-  background-color: #1A5797;
+  background-color: #FF6464;
 }
 
 div.item:nth-of-type(9) {
   --offset: 9;
-  background-color: blueviolet;
+  background-color: #91C483;
 }
 
 div.item:nth-of-type(10) {
   --offset: 10;
-  background-color: greenyellow;
+  background-color: #FFE162;
 }
 
 div.item:nth-of-type(11) {
   --offset: 11;
-  background-color: #BA9C7D;
+  background-color: #FF6464;
 }
 
 div.item:nth-of-type(12) {
   --offset: 12;
-  background-color: #66FF66;
+  background-color: #91C483;
 }
+
+div.item:nth-of-type(13) {
+  --offset: 13;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(14) {
+  --offset: 14;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(15) {
+  --offset: 15;
+  background-color: #91C483;
+}
+
+div.item:nth-of-type(16) {
+  --offset: 16;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(17) {
+  --offset: 17;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(18) {
+  --offset: 18;
+  background-color: #91C483;
+}
+
+div.item:nth-of-type(19) {
+  --offset: 19;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(20) {
+  --offset: 20;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(21) {
+  --offset: 21;
+  background-color: #91C483;
+}
+
+div.item:nth-of-type(22) {
+  --offset: 22;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(23) {
+  --offset: 23;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(24) {
+  --offset: 24;
+  background-color: #91C483;
+}
+
+div.item:nth-of-type(25) {
+  --offset: 25;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(26) {
+  --offset: 26;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(27) {
+  --offset: 27;
+  background-color: #91C483;
+}
+
+div.item:nth-of-type(28) {
+  --offset: 28;
+  background-color: #FFE162;
+}
+
+div.item:nth-of-type(29) {
+  --offset: 29;
+  background-color: #FF6464;
+}
+
+div.item:nth-of-type(30) {
+  --offset: 30;
+  background-color: #91C483;
+}
+
+
+//***CARDS WITH ORIGINAL COLORS. STILL NEED TO UPDATE CARD 13 AND ABOVE***
+
+// div.item:nth-of-type(1) {
+//   --offset: 1;
+//   background-color: #90f1ef;
+// }
+
+// div.item:nth-of-type(2) {
+//   --offset: 2;
+//   background-color: #ff70a6;
+// }
+
+// div.item:nth-of-type(3) {
+//   --offset: 3;
+//   background-color: #ff9770;
+// }
+
+// div.item:nth-of-type(4) {
+//   --offset: 4;
+//   background-color: #ffd670;
+// }
+
+// div.item:nth-of-type(5) {
+//   --offset: 5;
+//   background-color: #e9ff70;
+// }
+
+// div.item:nth-of-type(6) {
+//   --offset: 6;
+//   background-color: #FFC0CB;
+// }
+
+// div.item:nth-of-type(7) {
+//   --offset: 7;
+//   background-color: #C284FF;
+// }
+
+// div.item:nth-of-type(8) {
+//   --offset: 8;
+//   background-color: #1A5797;
+// }
+
+// div.item:nth-of-type(9) {
+//   --offset: 9;
+//   background-color: blueviolet;
+// }
+
+// div.item:nth-of-type(10) {
+//   --offset: 10;
+//   background-color: greenyellow;
+// }
+
+// div.item:nth-of-type(11) {
+//   --offset: 11;
+//   background-color: #BA9C7D;
+// }
+
+// div.item:nth-of-type(12) {
+//   --offset: 12;
+//   background-color: #66FF66;
+// }
 
 // div.item:nth-of-type(13) {
 //   --offset: 13;
@@ -197,10 +409,3 @@ div.item:nth-of-type(12) {
 //   --offset: 30;
 //   background-color: #66FF66;
 // }
-
-.notransition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
