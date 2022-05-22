@@ -66,6 +66,10 @@ ul li {
   transition: 0.5s;
 }
 
+.fa-heart:hover{
+  color: red;
+}
+
 .fa-heart-clicked{
   color: red;
   font-size: 24px;
