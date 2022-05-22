@@ -1,117 +1,270 @@
-<%= render '/shared/navbar' %>
-<div class="container">
-  <div class="row">
-
-    <div class="col justify-content-center body">
-      <main id="carousel">
-        <div class="item">
-          <h2><%= Activity.find(1).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(1).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/1", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(2).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(2).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/2", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(3).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(3).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/3", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(4).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(4).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/4", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(5).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(5).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/5", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(6).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(6).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/6", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(7).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(7).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/7", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(8).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(8).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/8", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(9).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(9).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/9", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(10).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(10).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/10", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(11).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(11).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/11", class:"btn-sm btn-dark" %>
-        </div>
-        <div class="item">
-          <h2><%= Activity.find(12).name %></h2>
-          <img class="wheel-image" src="<%= Activity.find(12).image %>" alt="">
-          <br>
-          <%= link_to "Go to Activity", "/activities/12", class:"btn-sm btn-dark" %>
-        </div>
-        <%# <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div> %>
-      <main>
-    </div>
-
+<div class="background-wheel">
+  <%= render '/shared/navbar' %>
+  <div class="container">
     <div class="row">
-      <div class="col d-flex justify-content-center">
-        <button type="button" class="btn-lg btn-dark" id="random">Spin me!</button>
+      <div class="col justify-content-center body">
+        <main id="carousel">
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(1).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(1).name %></h3>
+              <%# <p><%= Activity.find(1).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/1", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(2).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(2).name %></h3>
+              <%# <p><%= Activity.find(2).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/2", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(3).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(3).name %></h3>
+              <%# <p><%= Activity.find(3).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/3", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(4).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(4).name %></h3>
+              <%# <p><%= Activity.find(4).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/4", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(5).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(5).name %></h3>
+              <%# <p><%= Activity.find(5).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/5", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(6).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(6).name %></h3>
+              <%# <p><%= Activity.find(6).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/6", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(7).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(7).name %></h3>
+              <%# <p><%= Activity.find(7).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/7", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(8).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(8).name %></h3>
+              <%# <p><%= Activity.find(8).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/8", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(9).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(9).name %></h3>
+              <%# <p><%= Activity.find(9).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/9", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(10).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(10).name %></h3>
+              <%# <p><%= Activity.find(10).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/10", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(11).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(11).name %></h3>
+              <%# <p><%= Activity.find(11).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/11", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(12).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(12).name %></h3>
+              <%# <p><%= Activity.find(12).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/12", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(13).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(13).name %></h3>
+              <%# <p><%= Activity.find(13).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/13", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(14).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(14).name %></h3>
+              <%# <p><%= Activity.find(14).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/14", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(15).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(15).name %></h3>
+              <%# <p><%= Activity.find(15).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/15", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(16).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(16).name %></h3>
+              <%# <p><%= Activity.find(16).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/16", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(17).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(17).name %></h3>
+              <%# <p><%= Activity.find(17).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/17", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(18).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(18).name %></h3>
+              <%# <p><%= Activity.find(18).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/18", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(19).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(19).name %></h3>
+              <%# <p><%= Activity.find(19).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/19", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(20).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(20).name %></h3>
+              <%# <p><%= Activity.find(20).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/20", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(21).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(21).name %></h3>
+              <%# <p><%= Activity.find(21).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/21", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(22).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(22).name %></h3>
+              <%# <p><%= Activity.find(22).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/22", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(23).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(23).name %></h3>
+              <%# <p><%= Activity.find(23).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/23", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(24).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(24).name %></h3>
+              <%# <p><%= Activity.find(24).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/24", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(25).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(25).name %></h3>
+              <%# <p><%= Activity.find(25).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/25", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(26).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(26).name %></h3>
+              <%# <p><%= Activity.find(26).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/26", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(27).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(27).name %></h3>
+              <%# <p><%= Activity.find(27).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/27", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(28).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(28).name %></h3>
+              <%# <p><%= Activity.find(28).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/28", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(29).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(29).name %></h3>
+              <%# <p><%= Activity.find(29).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/29", class:"wheel-card-btn" %>
+            </div>
+          </div>
+          <div class="item">
+            <img class="wheel-image" src="<%= Activity.find(30).image %>" alt="">
+            <div class="item-text">
+              <h3><%= Activity.find(30).name %></h3>
+              <%# <p><%= Activity.find(30).description.truncate_words(10) %></p>
+              <%= link_to "See activity", "/activities/30", class:"wheel-card-btn" %>
+            </div>
+          </div>
+
+        <main>
+      </div>
+
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <button type="button" class="spin-button" id="random">Spin me!</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" id="before" style="visibility: hidden">Before</button>
+        <button type="button" class="btn btn-primary" id="next" style="visibility: hidden">Next</button>
+        </div>
+      </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col d-flex justify-content-center">
-      <button type="button" class="btn btn-primary" id="before" style="visibility: hidden">Before</button>
-      <button type="button" class="btn btn-primary" id="next" style="visibility: hidden">Next</button>
-      </div>
-    </div>
-    </div>
   </div>
 
-</div>
+  <%= javascript_pack_tag 'wheel' %>
 
-<%= javascript_pack_tag 'wheel' %>
+</div>
