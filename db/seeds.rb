@@ -53,3 +53,13 @@ User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_
 
 #fake orgnaisation
 Organisation.create(name:"Test organisation", url:"#", activity_id:1)
+
+csv_file_5 = 'lib/assets/Organisation_CSV.csv'
+@organisations = []
+CSV.foreach(csv_file_5, headers: :first_row, header_converters: :symbol) do |row|
+  row[:id] = row[:id].to_i # Convert column to Integer
+  row[:activity_id] = row[:activity_id].to_i   # Convert column to Integer
+  row[:name] = row[:name]
+  row[:url] = row[:url]
+  @organisations << Organisation.create(row)
+end
