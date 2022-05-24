@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :activities, only: %i[index show] do
     member do
       post 'toggle_favorite', to: "activities#toggle_favorite"
+      post 'toggle_type', to: "activities#toggle_type"
     end
   end
 
