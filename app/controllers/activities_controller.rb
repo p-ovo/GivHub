@@ -12,6 +12,7 @@ before_action :authenticate_user!, only: :toggle_favorite
 
   def show
     @activity = Activity.find(params[:id])
+    @organisation = Organisation.where(activity_id: @activity.id)
   end
 
   def new

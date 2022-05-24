@@ -12,8 +12,10 @@
     <h2 class="connect-title"><span>Connect with these organisations</span></h2>
     <div class="container border-connect">
       <ul>
-        <p><li>ORGANISATION NAME</li></p>
-        <p><li>ORGANISATION NAME</li></p>
+        <% @activity.organisation.each do |organisation| %>
+          <p><li><a href=<%= organisation.url %>><%= organisation.name %></a></li></p>
+          <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <% end %>
       </ul>
     </div>
   </div>
