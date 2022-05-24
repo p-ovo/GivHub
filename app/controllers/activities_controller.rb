@@ -36,6 +36,11 @@ before_action :authenticate_user!, only: :toggle_favorite
     @favourite = current_user.favorited?(@activity) ? 'fa-heart-clicked' : 'fa-heart'
   end
 
+  def toggle_type
+    @type = Type.find_by(name: params[:type])
+    @activities = @type ? Activity.joins(:types).where(types: {id: @type.id} ) : Activity.all
+  end
+
   private
   def activity_params
     params.require(:activity).permit(:description, :name)
