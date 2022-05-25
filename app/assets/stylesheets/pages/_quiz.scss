@@ -95,3 +95,25 @@
   background-color: black;
   color: white;
 }
+
+
+// sign up pop up
+.modal-content {
+  border: 5px solid #000;
+  border-radius: 30px;
+}
+
+.modal-button {
+  border-radius: 30px;
+  background-color: black;
+  border: 5px solid #000;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;;
+}
+
+.modal-button:hover {
+  background-color: white;
+  color: black;
+  border: 5px solid #000;
+}
