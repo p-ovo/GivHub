@@ -52,7 +52,7 @@ end
 User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_id: 1)
 
 #fake orgnaisation
-Organisation.create(name:"Test organisation", url:"#", activity_id:1)
+# Organisation.create(name:"Test organisation", url:"#", activity_id: 1)
 
 csv_file_5 = 'lib/assets/Organisation_CSV.csv'
 @organisations = []
