@@ -1,4 +1,4 @@
-<div class="activity-show-background" style="height: 100vh">
+<div class="activity-show-background" style="height: 100%">
   <%= render '/shared/navbar' %>
   <div class="container activity-main">
     <div class="activity-name">
@@ -9,13 +9,14 @@
   </div>
 
   <div class="container activity-connect">
-    <h2 class="connect-title"><span>Connect with these organisations</span></h2>
+    <h2><span>Check out these organisations</span></h2>
     <div class="container border-connect">
       <ul>
         <% @activity.organisation.each do |organisation| %>
-          <p><li><a href=<%= organisation.url %>><%= organisation.name %></a></li></p>
+          <p><li><img src="https://cdn-icons-png.flaticon.com/512/1828/1828614.png" width="2%"><a href=<%= organisation.url %> class="org-link"> <%= organisation.name %></a></li></p>
         <% end %>
       </ul>
     </div>
   </div>
+  <br><br>
 </div>
