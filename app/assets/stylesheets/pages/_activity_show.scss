@@ -44,17 +44,30 @@
 }
 
 .activity-connect {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.connect-title {
   font-family: 'Fredoka One', cursive;
-  margin-left: 50px;
   margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: pink;
+  font-size: 18px;
 }
 
-.border-connect {
 
+.org-link {
+  color: black;
+  font-size: 16px;
+  margin-left: 5px;
+}
 
+.org-link:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+li {
+  margin: 10px 0;
 }
