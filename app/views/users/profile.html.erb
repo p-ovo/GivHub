@@ -3,10 +3,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-10">
-      <h1 class="greeting"><span style="background-color: #fdea96">Hey, <%= current_user.name %></span></h1>
+      <h1 class="greeting"><span style="background-color: #fdea96">Hey, <%= current_user.name.capitalize %></span></h1>
       <div class="user-personality">
       <%# Please check if @personality.name/image/description is the right linkage to user%>
-        <h2>You are a <span style="background-color: #ffbb00; border-radius: 3px;"><%= @personality.name %></span></h2>
+        <h2>You are <span><%= @personality.name %></span></h2>
+         <%# style="background-color: #ffbb00; border-radius: 3px;" %>
         <br>
         <img src="<%= @personality.image %>" alt="" class="personality-img">
         <div class="personality-description">
