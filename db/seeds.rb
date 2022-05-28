@@ -49,7 +49,7 @@ end
 
 
 # fake user
-User.create(name:"saki", email:"saki@gmail.com", password:"123456", personality_id: 1)
+User.create(name:"Pip", email:"pip@gmail.com", password:"123456", personality_id: 7)
 
 #fake orgnaisation
 # Organisation.create(name:"Test organisation", url:"#", activity_id: 1)
