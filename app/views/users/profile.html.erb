@@ -19,6 +19,26 @@
       <div class="recommendation">
         <h2 class="profile-titles">Recommended Activities</h2>
         <div class="profile-cards">
+        <% if current_user.personality_id == 7 %>
+            <% activities = [Activity.find(13), Activity.find(25), Activity.find(17), Activity.find(14)] %>
+            <% activities.each do |activity| %>
+              <div class="card">
+                <img class="card-img-top" src="<%= activity.image %>" alt="picture">
+                <div class="card-body">
+                  <h3 class="card-title"><%= activity.name %></h3>
+                  <p class="card-description"><%= activity.description.truncate_words(15) %></p>
+                  <div class="card-link">
+                    <%= link_to toggle_favorite_activity_path(activity), remote: true, method: :post do %>
+                    <%= render 'users/like_button', activity: activity %>
+                    <% end %>
+                    <div>
+                      <a href="<%= activity_path(activity) %>" class="btn-recommended">See activity</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+        <% else  %>
           <% activities = [Activity.find(1), Activity.find(4), Activity.find(8), Activity.find(22)] %>
             <% activities.each do |activity| %>
               <div class="card">
@@ -37,6 +57,7 @@
                 </div>
               </div>
               <% end %>
+        <% end %>
         </div>
       </div>
 
